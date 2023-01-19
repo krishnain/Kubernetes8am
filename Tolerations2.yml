@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-deployment
+  labels:
+    author: intelliqit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      author: intelliqit
+  template:
+    metadata:
+      name: httpd-pod
+      labels:
+        author: intelliqit
+    spec:
+      containers:
+        - name: myhttpd
+          image: httpd
+      tolerations:
+        - key: slave2
+          value: intelliqit2
+          operator: Equal
+          effect: NoSchedule
+...
+             
+  

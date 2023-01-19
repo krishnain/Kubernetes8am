@@ -1,0 +1,13 @@
+---
+apiVersion: V1
+kind: pod
+metadata: 
+  name: nginx-pod
+  labels: 
+    type: proxy
+    author: intelliqit 
+spec:
+  containers:
+    - name: mynginx
+      image: nginx
+...        

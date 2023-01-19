@@ -1,0 +1,15 @@
+---
+api Version:
+kind: 
+metadata:
+  name: nginx-pod 
+  labels: 
+    type: proxy
+    author: sunil
+spec: 
+ containers:
+    - name: mynginx
+      image: nginx
+ 
+...
+.
